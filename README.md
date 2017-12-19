@@ -5,3 +5,7 @@
 如果提示“error: jemalloc/jemalloc.h: No such file or directory”，则可以先执行指令：make distclean
 
 make CFLAGS="-g -O0" 关闭优化  
+
+报错：
+搜索后分别进入redis下的deps下的hiredis、lua和jemalloc下运行make。  
+jemalloc下可能要先运行./configure，然后make。最后回到redis的src下，运行make，出现了一些乱其八糟的东西。  
